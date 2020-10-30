@@ -1,0 +1,48 @@
+extends common/layout
+
+block content
+	section.catalog
+		.container
+			.catalog__wrap
+				.catalog__head.head-catalog
+					.head-catalog__left
+						h1.head-catalog__title Магазин
+						span.head-catalog__result-count Показано 13–24 из 40 результатов
+					.head-catalog__right
+						select.head-catalog__sort(name="sort")
+							option(value="default" selected) Сортировка по умолчанию
+							option(value="popular") По популярности
+							option(value="rating") По рейтингу
+							option(value="date") По дате
+							option(value="price-asc") По цене: от дешевых
+							option(value="price-desc") По цене: от дорогих
+						span.head-catalog__breadcrumbs
+							a.head-catalog__breadcrumbs-link(href="#") Home » Магазин - Страница 2
+				.catalog__options.options-catalog
+					.options-catalog__filters
+						a.options-catalog__filter.active(href="#") Все
+						a.options-catalog__filter(href="#") Сумки
+				.catalog__products.products-catalog
+					- for (var i = 0; i < 12; i++)
+						.product
+							a.product__link(href="#")
+								img.products__img(src="img/products/item__01.jpg", alt="Product")
+							a.product__link(href="#")
+								h3.product__title Сумка Bordon синий крокодил
+							.product__rate
+								span.product__rate-text Not rated
+							span.product__price 2500 грн.
+							a.product__button Подробнее
+				.catalog__pagination.pagination-catalog
+					ul.pagination-catalog__list
+						li.pagination-catalog__item
+							a.pagination-catalog__link.active(href="#") 1
+
+						li.pagination-catalog__item
+							a.pagination-catalog__link(href="#") 2
+
+						li.pagination-catalog__item
+							a.pagination-catalog__link(href="#") 3
+
+						li.pagination-catalog__item
+							a.pagination-catalog__link(href="#") →
