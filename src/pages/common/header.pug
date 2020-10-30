@@ -1,50 +1,53 @@
 header.header
 	.header__bar
-		.search
-			form.search__form
-				input.search__input(type="text" name="search" method="get" placeholder="Искать")
-				button.search__submit(type="submit")
-					+icon("magnifier", "search__icon")
-		.header__content
-			ul.header__socials
-				li.header__social
-					a(href="#")
-						+icon("facebook", "header__social-icon")
+		.container
+			.header__bar-wrap
+				.search
+					form.search__form
+						input.search__input(type="text" name="search" method="get" placeholder="Искать")
+						button.search__submit(type="submit")
+							+icon("magnifier", "search__icon")
+				.header__content
+					ul.header__socials
+						li.header__social
+							a(href="#")
+								+icon("facebook", "header__social-icon")
 
-				li.header__social
-					a(href="#")
-						+icon("vk", "header__social-icon")
+						li.header__social
+							a(href="#")
+								+icon("vk", "header__social-icon")
 
-				li.header__social
-					a(href="#")
-						+icon("instagram", "header__social-icon")
-						
-				li.header__social
-					a.header__social-link(href="#")
-						+icon("phone", "header__social-icon")
-			.header__cart.cart-header
-				+icon("cart", "header__cart-icon")
-				span.cart-header__title Ваша корзина
-				span.cart-header__dash -
-				span.cart-header__amount 0 грн.
+						li.header__social
+							a(href="#")
+								+icon("instagram", "header__social-icon")
+								
+						li.header__social
+							a.header__social-link(href="#")
+								+icon("phone", "header__social-icon")
+					.header__cart.cart-header
+						+icon("cart", "header__cart-icon")
+						span.cart-header__title Ваша корзина
+						span.cart-header__dash -
+						span.cart-header__amount 0 грн.
 	.header__menu
-		nav.header__nav.nav-header
-			ul.nav-header__list
-				li.nav-header__item
-					a.nav-header__link(href="#")
-						span.nav-header__title О бренде
-				
-				li.nav-header__item
-					a.nav-header__link(href="#")
-						span.nav-header__title Каталог
+		.container
+			nav.header__nav.nav-header
+				ul.nav-header__list
+					li.nav-header__item
+						a.nav-header__link(href="#")
+							span.nav-header__title О бренде
+					
+					li.nav-header__item
+						a.nav-header__link(href="#")
+							span.nav-header__title Каталог
 
-				li.nav-header__item
-					a.nav-header__link(href="./")
-						+icon("logo", "header__logo")
+					li.nav-header__item
+						a.nav-header__link(href="./")
+							+icon("logo", "header__logo")
 
-				li.nav-header__item
-					a.nav-header__link(href="#")
-						span.nav-header__title Контакты
+					li.nav-header__item
+						a.nav-header__link(href="#")
+							span.nav-header__title Контакты
 	.container
 		//- a.logo(href="./")
 		//- 	+icon('logo', 'logo__svg')
