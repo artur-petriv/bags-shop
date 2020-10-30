@@ -11,3 +11,36 @@ block content
 						a.breadcrumbs__link(href="#") Сумки
 						span.breadcrumbs__tag -
 						span.breadcrumbs__current Страница 2
+				.card__content
+					.card__galery.galery-card
+						a.galery-card__link(href="#")
+							img.galery-card__img(src="img/products/item_01.jpg" alt="bag")
+						.galery-card__thumbnails
+							- for (var i = 0; i < 5; i++)
+								a.galery-card__item(href="#")
+									img.galery-card__thumbnail(src="img/products/item_02-0#{i}.jpg" alt="Thumbnail")
+
+					.card__info.info-card
+						h1.info-card__title Сумка Bordon синий
+						span.info-card__price 2700 грн.
+						p.info-card__text Стильная сумка из натуральной кожи.По конструкции бочка можно как вытянут наружу,так и сложить во внутрь. В комплекте длинная съмная ручка. Внутри тканевая подкладка с двумя карманами.
+						p.info-card__text
+							span.info-card__name Размер:
+							| ширина 20 см, высота 20 см, толщина 11 см.
+						form.info-card__form
+							.info-card__amount
+								input.info-card__quantity(type="number" value="1" title="Кол-во" step="1" min="1" size="4")
+								input(type="button" value="-" class="minus")
+								input(type="button" value="+" class="plus")
+								button.info-card__submit(type="submit") Добавить в корзину
+						.info-card__meta
+							.info-card__article
+								span.info-card__article-name Артикул:
+								span.info-card__article-number 6-02
+							.info-card__category
+								span.info-card__category-name Категория:
+								a.info-card__category-link(href="#") Сумки
+
+
+
+				.card__similar-products
