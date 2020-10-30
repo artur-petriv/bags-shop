@@ -20,7 +20,7 @@ header.header
 						+icon("instagram", "header__social-icon")
 						
 				li.header__social
-					a(href="#")
+					a.header__social-link(href="#")
 						+icon("phone", "header__social-icon")
 			.header__cart.cart-header
 				+icon("cart", "header__cart-icon")
@@ -28,6 +28,23 @@ header.header
 				span.cart-header__dash -
 				span.cart-header__amount 0 грн.
 	.header__menu
+		nav.header__nav.nav-header
+			ul.nav-header__list
+				li.nav-header__item
+					a.nav-header__link(href="#")
+						span.nav-header__title О бренде
+				
+				li.nav-header__item
+					a.nav-header__link(href="#")
+						span.nav-header__title Каталог
+
+				li.nav-header__item
+					a.nav-header__link(href="./")
+						+icon("logo", "header__logo")
+
+				li.nav-header__item
+					a.nav-header__link(href="#")
+						span.nav-header__title Контакты
 	.container
 		//- a.logo(href="./")
 		//- 	+icon('logo', 'logo__svg')
