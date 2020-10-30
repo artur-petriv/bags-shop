@@ -1,7 +1,7 @@
 extends common/layout
 
 block content
-	section.slider-main
+	div.slider-main
 		.container
 			.slider-main__list
 				.slider-main__item
@@ -18,3 +18,20 @@ block content
 					img.slider-main__img(src="img/slider/item_03.jpg", alt="Bag")
 					a.slider-main__link(href="#") Подробнее
 						+icon("arrow-right", "slider-main__icon")
+
+
+	section.featured-products
+		h2.featured-products__title Featured Products
+		.featured-products__list
+
+			- for (var i = 0; i < 6; i++)
+				.featured-product
+					a.featured-product__link(href="#")
+						img.featured-products__img(src="img/products/item__01.jpg", alt="Product")
+					a.featured-product__link(href="#")
+						h3.featured-product__title Сумка Bordon синий крокодил
+					.featured-product__rate
+						span.featured-product__rate-text Not rated
+					span.featured-product__price 2500 грн.
+					a.featured-product__button Подробнее
+
