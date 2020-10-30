@@ -43,4 +43,16 @@ block content
 
 
 
-				.card__similar-products
+				.similar-products
+					h2.similar-products__title Связанные продукты
+					.similar-products__list
+						- for (var i = 0; i < 6; i++)
+							.product
+								a.product__link(href="#")
+									img.products__img(src="img/products/item__01.jpg", alt="Product")
+								a.product__link(href="#")
+									h3.product__title Сумка Bordon синий крокодил
+								.product__rate
+									span.product__rate-text Not rated
+								span.product__price 2500 грн.
+								a.product__button Подробнее
