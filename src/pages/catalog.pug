@@ -3,21 +3,25 @@ extends common/layout
 block content
 	section.catalog
 		.container
-			.catalog__wrap
-				.catalog__head.head-catalog
-					.head-catalog__left
-						h1.head-catalog__title Магазин
-						span.head-catalog__result-count Показано 13–24 из 40 результатов
-					.head-catalog__right
-						select.head-catalog__sort(name="sort")
+			.page
+				.page__head.head-page
+					.head-page__left
+						h1.head-page__title Магазин
+						span.head-page__result-count Показано 13–24 из 40 результатов
+					.head-page__right
+						select.head-page__sort(name="sort")
 							option(value="default" selected) Сортировка по умолчанию
 							option(value="popular") По популярности
 							option(value="rating") По рейтингу
 							option(value="date") По дате
 							option(value="price-asc") По цене: от дешевых
 							option(value="price-desc") По цене: от дорогих
-						span.breadcrumbs
-							a.breadcrumbs-link(href="#") Home » Магазин - Страница 2
+						div.breadcrumbs
+							a.breadcrumbs__link(href="#") Home
+							span.breadcrumbs__tag »
+							a.breadcrumbs__link(href="#") Магазин
+							span.breadcrumbs__tag -
+							span.breadcrumbs__current Страница 2
 				.catalog__options.options-catalog
 					.options-catalog__filters
 						a.options-catalog__filter.active(href="#") Все
