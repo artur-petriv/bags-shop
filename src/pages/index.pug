@@ -1,1 +1,20 @@
 extends common/layout
+
+block content
+	section.slider-main
+		.container
+			.slider-main__list
+				.slider-main__item
+					img.slider-main__img(src="img/slider/item_01.jpg", alt="Bag")
+					a.slider-main__link(href="#") Подробнее
+						+icon("arrow-right", "slider-main__icon")
+				
+				.slider-main__item
+					img.slider-main__img(src="img/slider/item_02.jpg", alt="Bag")
+					a.slider-main__link(href="#") Подробнее
+						+icon("arrow-right", "slider-main__icon")
+
+				.slider-main__item
+					img.slider-main__img(src="img/slider/item_03.jpg", alt="Bag")
+					a.slider-main__link(href="#") Подробнее
+						+icon("arrow-right", "slider-main__icon")
