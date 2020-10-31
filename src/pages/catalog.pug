@@ -16,7 +16,7 @@ block content
 							option(value="date") По дате
 							option(value="price-asc") По цене: от дешевых
 							option(value="price-desc") По цене: от дорогих
-						div.breadcrumbs
+						.breadcrumbs
 							a.breadcrumbs__link(href="#") Home
 							span.breadcrumbs__tag »
 							a.breadcrumbs__link(href="#") Магазин
@@ -27,7 +27,7 @@ block content
 						a.options-catalog__filter.active(href="#") Все
 						a.options-catalog__filter(href="#") Сумки
 				.catalog__products.products-catalog
-					- for (var i = 0; i < 12; i++)
+					-for(var i = 0; i < 12; i++)
 						.product
 							a.product__link(href="#")
 								img.products__img(src="img/products/item__01.jpg", alt="Product")

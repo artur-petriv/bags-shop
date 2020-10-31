@@ -1,7 +1,7 @@
 extends common/layout
 
 block content
-	div.slider-main
+	.slider-main
 		.container
 			.slider-main__list
 				.slider-main__item
@@ -19,12 +19,11 @@ block content
 					a.slider-main__link(href="#") Подробнее
 						+icon("arrow-right", "slider-main__icon")
 
-
 	section.featured-products
 		h2.featured-products__title Featured Products
 		.featured-products__list
 
-			- for (var i = 0; i < 6; i++)
+			-for(var i = 0; i < 6; i++)
 				.product
 					a.product__link(href="#")
 						img.products__img(src="img/products/item__01.jpg", alt="Product")
@@ -34,4 +33,3 @@ block content
 						span.product__rate-text Not rated
 					span.product__price 2500 грн.
 					a.product__button Подробнее
-

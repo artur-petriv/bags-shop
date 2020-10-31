@@ -1,0 +1,109 @@
+.header
+	position: relative
+	&__bar
+		background-color: $color_dark
+		&-wrap
+			display: flex
+			justify-content: space-between
+			align-items: stretch
+	&__content
+		display: flex
+		align-items: stretch
+	&__socials
+		padding: 0
+		margin: 0
+		display: flex
+		align-items: stretch
+		list-style: none
+	&__logo
+		width: 200px
+		height: 58px
+		fill: $color_brand
+		display: flex
+		align-items: center
+	&__social
+		display: flex
+		align-items: stretch
+		&-icon
+			height: 14px
+			width: 14px
+			fill: $color_white
+		&-link
+			padding: 0 10px
+			transition: background .5s ease
+			display: flex
+			align-items: center
+			&:hover
+				background-color: rgba(255,255,255,.2)
+	&__cart
+		&-icon
+			height: 14px
+			width: 14px
+			fill: $color_white
+	&__menu
+	&__nav
+
+.cart-header
+	padding: 0 10px
+	margin-left: 40px
+	display: flex
+	align-items: center
+	font-size: 1.4rem
+	color: $color_white
+	transition: background .5s ease
+	align-self: stretch
+	&:hover
+		color: $color_white
+		background-color: rgba(255,255,255,.2)
+	&__title
+		padding-left: 7px
+	&__dash
+		padding: 0 5px
+	&__amount
+
+.nav-header
+	&__list
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&__item
+	&__link
+	&__title
+		font-family: $font_title
+		font-size: 20px
+		text-transform: uppercase
+		color: $color_brand
+		font-weight: 900
+
+.search
+	&__form
+		padding: 5px 0
+		position: relative
+		display: flex
+		align-items: center
+	&__input
+		padding: 5px 0 5px 35px
+		background-color: rgba(255,255,255,0.2)
+		color: #fff
+		border: none
+		width: 200px
+		&::placeholder
+			color: #fff
+	&__submit
+		padding: 0 10px
+		height: 100%
+		position: absolute
+		top: 50%
+		left: 0
+		transform: translate(0, -50%)
+		appearance: none
+		display: flex
+		align-items: center
+		jcc
+		border: none
+		background-color: transparent
+		cursor: pointer
+	&__icon
+		height: 14px
+		width: 14px
+		fill: $color_white
