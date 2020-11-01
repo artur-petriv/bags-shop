@@ -1,16 +1,76 @@
 .footer
+	padding: 20px 0
+	background-color: #f2f2f2
+	color: $color_dark
 	&__wrap
+		margin-top: 10px
 	&__content
 	&__copyright
+		padding: 20px 0 10px
 	&__text
+		padding: 4px 0
+		font-family: $font_default
+		font-size: 1.2rem
 
 .content-footer
+	display: flex
+	align-items: flex-start
+	justify-content: space-between
 	&__column
 	&__title
+		margin: 15px 0
+		font-size: 24px
+		font-weight: 600
+		color: $color_dark
+		font-family: $font_title
 	&__list
+		margin: 0 0 0 20px
 		&_socials
+			display: flex
+			align-items: center
 	&__item
 		&_social
+			margin-right: 5px
+			margin-bottom: 5px
+			display: flex
+			align-items: center
 	&__link
+		padding: 6px 8px
+		margin-bottom: 5px
+		background-color: rgba(0,0,0,.1)
+		max-width: 130px
+		display: flex
+		align-items: center
+		color: $color_dark
+		font-family: $font_default
+		position: relative
+		font-size: 1.4rem
+		transition: background 0.4s ease
+		fill: $color_dark
+		&:hover
+			background-color: $color_blue
+			color: $color_white
+			fill: $color_white
 		&_category
+			padding: 5px 0 5px 0
+			margin-bottom: 5px
+			border-bottom: 1px solid rgba(0,0,0,0.05)
+			background-color: transparent
+			max-width: 200px
+			&:hover
+				background-color: transparent
+				color: $color_blue
+			&::after
+				content: ''
+				position: absolute
+				top: 50%
+				right: 0
+				transform: translate(0, -50%)
+				height: 7px
+				width: 7px
+				background: url(../img/play.png) no-repeat center center
+				background-size: contain
+				opacity: 0.6
 	&__icon
+		height: 18px
+		width: 18px
