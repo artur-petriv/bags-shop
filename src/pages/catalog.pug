@@ -7,7 +7,7 @@ block content
 				.page__head.head-page
 					.head-page__left
 						h1.head-page__title Магазин
-						span.head-page__result-count Показано 13–24 из 40 результатов
+						span.head-page__result Показано 13–24 из 40 результатов
 					.head-page__right
 						select.head-page__sort(name="sort")
 							option(value="default" selected) Сортировка по умолчанию
@@ -19,18 +19,20 @@ block content
 						.breadcrumbs
 							a.breadcrumbs__link(href="#") Home
 							span.breadcrumbs__tag »
-							a.breadcrumbs__link(href="#") Магазин
-							span.breadcrumbs__tag -
-							span.breadcrumbs__current Страница 2
+							span.breadcrumbs__current Магазин
 				.catalog__options.options-catalog
 					.options-catalog__filters
 						a.options-catalog__filter.active(href="#") Все
 						a.options-catalog__filter(href="#") Сумки
-				.catalog__products.products-catalog
+				.catalog__products
 					-for(var i = 0; i < 12; i++)
 						.product
 							a.product__link(href="#")
-								img.products__img(src="img/products/item__01.jpg", alt="Product")
+								.product__images
+									.product__image.product__image-front
+										img.product__img(src="img/product_01.jpg", alt="Product")
+									.product__image.product__image-back
+										img.product__img(src="img/product_02.jpg", alt="Product")
 							a.product__link(href="#")
 								h3.product__title Сумка Bordon синий крокодил
 							.product__rate

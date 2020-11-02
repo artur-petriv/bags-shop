@@ -1,0 +1,126 @@
+.catalog
+	&__options
+	&__products
+		display: flex
+		align-items: flex-start
+		justify-content: space-between
+		flex-flow: wrap
+		& > .product
+			margin: 0 0 15px
+			flex-basis: 24%
+	&__pagination
+
+.page
+	padding: 10px 0 30px
+	&__head
+	
+.head-page
+	padding: 20px 0
+	display: flex
+	align-items: center
+	justify-content: space-between
+	border-top: 1px solid #eee
+	border-bottom: 1px solid #eee
+	&__left
+		display: flex
+		flex-direction: column
+		flex: 1
+	&__right
+		flex: 1
+		display: flex
+		flex-direction: column
+	&__title
+		margin: 0 0 12px
+		font-family: $font_title
+		font-size: 38px
+		font-weight: 400
+		color: $color_black
+		line-height: 1
+	&__result
+		font-size: 11px
+		font-family: $font_default
+		font-weight: 400
+		color: $color_dark
+	&__sort
+		padding-left: 8px
+		padding-right: 25px
+		white-space: nowrap
+		color: $color_black
+		user-select: none
+		line-height: 38px
+		font-size: 1.4rem
+		font-weight: 400
+		height: 40px
+		width: fit-content
+		border: 1px solid #eee
+		align-self: flex-end
+		appearance: none
+
+.breadcrumbs
+	padding: 12px 0 0
+	font-size: 11px
+	color: $color_dark
+	font-weight: 400
+	font-family: $font_default
+	text-align: right
+	&__link
+		margin: 10px 0 0
+		font-size: 11px
+		color: $color_dark
+		font-weight: 400
+		font-family: $font_default
+	&__tag
+		padding: 0 5px
+	&__current
+		
+
+.options-catalog
+	margin: 20px 0 15px
+	display: flex
+	justify-content: flex-end
+	&__filters
+		display: flex
+	&__filter
+		margin-left: 15px
+		padding: 7px 10px 9px
+		color: $color_black
+		font-family: $font_title
+		font-size: 18px
+		font-weight: 400
+		line-height: 1
+		display: flex
+		align-items: center
+		transition: all 0.5s linear
+		border: 1px solid
+		border-color: $color_white
+		&.active
+			border-color: rgba(0, 0, 0, .07)
+			background-color: rgba(0, 0, 0, .01)
+		&:hover
+			border-color: rgba(0, 0, 0, .07)
+			background-color: rgba(0, 0, 0, .01)
+.pagination-catalog
+	margin: 15px 0
+	&__list
+		display: flex
+		justify-content: center
+		align-items: center
+	&__item
+		padding: 0
+		margin: 3px 5px
+	&__link
+		padding: 6px 10px
+		font-weight: 700
+		border: 2px solid rgba(0,0,0,.06)
+		transition: border 0.25s ease-in-out
+		color: $color_blue
+		display: flex
+		font-size: 1.2rem
+		align-items: center
+		justify-content: center
+		&:hover
+			border-color: $color_blue
+		&.active
+			background-color: rgba(0,0,0,.03)
+			border-color: rgba(0,0,0,.06)
+			cursor: unset
