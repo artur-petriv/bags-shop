@@ -3,7 +3,7 @@ extends common/layout
 block head
 	head
 		meta(charset="utf-8")
-		title Laveri - accessories and bags brand shop
+		title LAVERI - accessories and bags brand shop
 		meta(content="width=device-width, initial-scale=1" name="viewport")
 		meta(content="ie=edge" http-equivx="x-ua-compatible")
 		link(href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet")
@@ -31,7 +31,6 @@ block content
 							+icon("arrow-right", "slider-main__icon")
 				.swiper-pagination
 				.swiper-button-prev
-					+icon("arrow-right", "swiper__icon")
 				.swiper-button-next
 
 	section.featured-products
@@ -39,16 +38,20 @@ block content
 			h2.featured-products__title Featured Products
 			.featured-products__list
 
-				-for(var i = 0; i < 6; i++)
+				-for(var i = 0; i < 5; i++)
 					.product
 						a.product__link(href="#")
-							img.products__img(src="img/products/item__01.jpg", alt="Product")
+							.product__images
+								.product__image.product__image-front
+									img.product__img(src="img/product_01.jpg", alt="Product")
+								.product__image.product__image-back
+									img.product__img(src="img/product_02.jpg", alt="Product")
 						a.product__link(href="#")
 							h3.product__title Сумка Bordon синий крокодил
 						.product__rate
 							span.product__rate-text Not rated
-						span.product__price 2500 грн.
-						a.product__button Подробнее
+						.product__price 2500 грн.
+						a.product__button В корзину
 
 block scripts
 	script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
