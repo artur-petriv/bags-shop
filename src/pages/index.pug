@@ -1,23 +1,38 @@
 extends common/layout
 
+block head
+	head
+		meta(charset="utf-8")
+		title Laveri - accessories and bags brand shop
+		meta(content="width=device-width, initial-scale=1" name="viewport")
+		meta(content="ie=edge" http-equivx="x-ua-compatible")
+		link(href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet")
+		link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
+		link(rel="stylesheet" href="css/style.min.css")
+
 block content
 	.slider-main
 		.container
-			.slider-main__list
-				.slider-main__item
-					img.slider-main__img(src="img/slider/item_01.jpg", alt="Bag")
-					a.slider-main__link(href="#") Подробнее
-						+icon("arrow-right", "slider-main__icon")
-				
-				.slider-main__item
-					img.slider-main__img(src="img/slider/item_02.jpg", alt="Bag")
-					a.slider-main__link(href="#") Подробнее
-						+icon("arrow-right", "slider-main__icon")
+			.swiper-container
+				.swiper-wrapper
+					.slider-main__item.swiper-slide
+						img.slider-main__img(src="img/banner_01.jpg", alt="Bag")
+						a.slider-main__link(href="#") Подробнее
+							+icon("arrow-right", "slider-main__icon")
+					
+					.slider-main__item.swiper-slide
+						img.slider-main__img(src="img/banner_02.jpg", alt="Bag")
+						a.slider-main__link(href="#") Подробнее
+							+icon("arrow-right", "slider-main__icon")
 
-				.slider-main__item
-					img.slider-main__img(src="img/slider/item_03.jpg", alt="Bag")
-					a.slider-main__link(href="#") Подробнее
-						+icon("arrow-right", "slider-main__icon")
+					.slider-main__item.swiper-slide
+						img.slider-main__img(src="img/banner_03.jpg", alt="Bag")
+						a.slider-main__link(href="#") Подробнее
+							+icon("arrow-right", "slider-main__icon")
+				.swiper-pagination
+				.swiper-button-prev
+					+icon("arrow-right", "swiper__icon")
+				.swiper-button-next
 
 	section.featured-products
 		.container
@@ -34,3 +49,20 @@ block content
 							span.product__rate-text Not rated
 						span.product__price 2500 грн.
 						a.product__button Подробнее
+
+block scripts
+	script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
+	script(src="js/main.min.js")
+	script.
+		var mySwiper = new Swiper('.swiper-container', {
+			loop: true,
+			simulateTouch: false,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			}
+		});
