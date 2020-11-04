@@ -2,7 +2,7 @@ extends common/layout
 
 prepend head
 	head
-		link(rel="stylesheet" href="https://raw.githubusercontent.com/dimsemenov/Magnific-Popup/master/dist/magnific-popup.css")
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css")
 
 block content
 	section.page.card
@@ -17,11 +17,11 @@ block content
 						span.breadcrumbs__current Страница 2
 				.card__content
 					.card__galery.galery-card
-						a.galery-card__link(href="#")
+						a.galery-card__link.magnific(href="img/product_01-big.jpg")
 							img.galery-card__img(src="img/product_01-big.jpg" alt="bag")
 						.galery-card__thumbnails
 							-for(var i = 0; i < 3; i++)
-								a.galery-card__item(href="#")
+								a.galery-card__item.magnific(href="img/product_01-big.jpg")
 									img.galery-card__thumbnail(src="img/product_02.jpg" alt="Thumbnail")
 
 					.card__info.info-card
@@ -64,6 +64,5 @@ block content
 								span.product__price 2500 грн.
 								a.product__button Подробнее
 
-
 append scripts
-	script(defer src="https://raw.githubusercontent.com/dimsemenov/Magnific-Popup/master/dist/jquery.magnific-popup.min.js")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js")
