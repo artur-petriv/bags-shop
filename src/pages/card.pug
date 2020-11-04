@@ -66,3 +66,12 @@ block content
 
 append scripts
 	script(src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js")
+	script.
+		$(document).ready(function () {
+			$(`.magnific`).magnificPopup({
+					type: `image`,
+					gallery: {
+							enabled: true,
+					},
+			})
+		})

@@ -1,15 +1,5 @@
 extends common/layout
 
-block head
-	head
-		meta(charset="utf-8")
-		title LAVERI - accessories and bags brand shop
-		meta(content="width=device-width, initial-scale=1" name="viewport")
-		meta(content="ie=edge" http-equivx="x-ua-compatible")
-		link(href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet")
-		link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
-		link(rel="stylesheet" href="css/style.min.css")
-
 block content
 	.slider-main
 		.container
@@ -53,9 +43,7 @@ block content
 						.product__price 2500 грн.
 						a.product__button В корзину
 
-block scripts
-	script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
-	script(src="js/main.min.js")
+append scripts
 	script.
 		var mySwiper = new Swiper('.swiper-container', {
 			loop: true,
