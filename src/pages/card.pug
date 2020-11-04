@@ -1,10 +1,14 @@
 extends common/layout
 
+prepend head
+	head
+		link(rel="stylesheet" href="https://raw.githubusercontent.com/dimsemenov/Magnific-Popup/master/dist/magnific-popup.css")
+
 block content
-	section.card
+	section.page.card
 		.container
-			.card__wrap
-				.card__head
+			.page__wrap
+				.page__head.head-page
 					.breadcrumbs
 						a.breadcrumbs__link(href="#") Home
 						span.breadcrumbs__tag »
@@ -14,25 +18,26 @@ block content
 				.card__content
 					.card__galery.galery-card
 						a.galery-card__link(href="#")
-							img.galery-card__img(src="img/products/item_01.jpg" alt="bag")
+							img.galery-card__img(src="img/product_01-big.jpg" alt="bag")
 						.galery-card__thumbnails
-							-for(var i = 1; i < 5; i++)
+							-for(var i = 0; i < 3; i++)
 								a.galery-card__item(href="#")
-									img.galery-card__thumbnail(src="img/products/item_02-0" + i + ".jpg" alt="Thumbnail")
+									img.galery-card__thumbnail(src="img/product_02.jpg" alt="Thumbnail")
 
 					.card__info.info-card
 						h1.info-card__title Сумка Bordon синий
 						span.info-card__price 2700 грн.
 						p.info-card__text Стильная сумка из натуральной кожи.По конструкции бочка можно как вытянут наружу,так и сложить во внутрь. В комплекте длинная съмная ручка. Внутри тканевая подкладка с двумя карманами.
 						p.info-card__text
-							span.info-card__name Размер:
+							.info-card__name Размер:
 							| ширина 20 см, высота 20 см, толщина 11 см.
 						form.info-card__form
 							.info-card__amount
-								input.info-card__quantity(type="number" value="1" title="Кол-во" step="1" min="1" size="4")
-								input.minus(type="button" value="-")
-								input.plus(type="button" value="+")
-								button.info-card__submit(type="submit") Добавить в корзину
+								input.info-card__quantity(type="text" value="1" title="Кол-во" step="1" min="1" size="4")
+								.info-card__buttons
+									input.plus(type="button" value="+")
+									input.minus(type="button" value="-")
+							button.info-card__submit(type="submit") Добавить в корзину
 						.info-card__meta
 							.info-card__article
 								span.info-card__article-name Артикул:
@@ -44,13 +49,21 @@ block content
 				.similar-products
 					h2.similar-products__title Связанные продукты
 					.similar-products__list
-						-for(var i = 0; i < 6; i++)
+						-for(var i = 0; i < 4; i++)
 							.product
 								a.product__link(href="#")
-									img.products__img(src="img/products/item__01.jpg" alt="Product")
+									.product__images
+										.product__image.product__image-front
+											img.product__img(src="img/product_01.jpg", alt="Product")
+										.product__image.product__image-back
+											img.product__img(src="img/product_02.jpg", alt="Product")
 								a.product__link(href="#")
 									h3.product__title Сумка Bordon синий крокодил
 								.product__rate
 									span.product__rate-text Not rated
 								span.product__price 2500 грн.
 								a.product__button Подробнее
+
+
+append scripts
+	script(defer src="https://raw.githubusercontent.com/dimsemenov/Magnific-Popup/master/dist/jquery.magnific-popup.min.js")

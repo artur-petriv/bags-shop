@@ -32,7 +32,14 @@ ul {
 
 a {
     text-decoration: none;
+    transition: color 0.3s ease-out;
+    color: $color_dark;
 }
+
+a:hover {
+    color: $color_blue;
+}
+
 
 a:active {
     color: initial;
@@ -40,6 +47,8 @@ a:active {
 
 input, textarea, button, select {
     outline: none;
+    font-size: 1.4rem;
+    font-family: $font_default;
 }
 
 .container {
