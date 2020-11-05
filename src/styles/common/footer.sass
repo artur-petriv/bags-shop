@@ -19,6 +19,8 @@
 	justify-content: space-between
 	flex-flow: row wrap
 	&__column
+		@include media-tablet-horizontal
+			flex-basis: 100%
 	&__title
 		margin: 15px 0
 		font-size: 24px

@@ -3,14 +3,16 @@
 .header
 	position: relative
 	&__bar
-		background-color: $color_dark
+		background-color: #6f6e6f
 		&-wrap
 			display: flex
 			justify-content: space-between
 			align-items: stretch
+			flex-flow: row wrap
 	&__content
 		display: flex
 		align-items: stretch
+		flex-flow: row wrap
 	&__socials
 		padding: 0
 		margin: 0
@@ -23,6 +25,8 @@
 		fill: $color_brand
 		display: flex
 		align-items: center
+		@include media-tablet-horizontal
+			width: 170px
 	&__social
 		display: flex
 		align-items: stretch
@@ -31,7 +35,7 @@
 			width: 14px
 			fill: $color_white
 		&-link
-			padding: 0 10px
+			padding: 8px 10px
 			transition: background .5s ease
 			display: flex
 			align-items: center
@@ -45,9 +49,10 @@
 	&__menu
 		padding: 20px 0 25px
 	&__nav
+		position: relative
 
 .cart-header
-	padding: 0 10px
+	padding: 8px 10px
 	margin-left: 40px
 	display: flex
 	align-items: center
@@ -59,6 +64,8 @@
 	&:hover
 		color: $color_white
 		background-color: rgba(255,255,255,.2)
+	@include media-tablet-horizontal
+		margin: 0
 	&__title
 		padding-left: 7px
 	&__dash
@@ -70,7 +77,19 @@
 		display: flex
 		align-items: center
 		justify-content: space-around
+		@include media-tablet-horizontal
+			justify-content: space-between
 	&__item
+		display: flex
+		@include media-tablet-horizontal
+			display: none
+		&:nth-of-type(3)
+			@include media-tablet-horizontal
+				display: flex
+	&__mobile
+		display: none
+		@include media-tablet-horizontal
+			display: flex
 	&__link
 	&__title
 		font-family: $font_title
@@ -80,13 +99,14 @@
 		font-weight: 900
 
 .search
+	order: -1
+	@include media-tablet-horizontal
+		order: 1
 	&__form
 		padding: 5px 0
 		position: relative
 		display: flex
 		align-items: center
-		@include media-mobile
-			order: 1
 	&__input
 		padding: 5px 0 5px 35px
 		background-color: rgba(255,255,255,0.2)
@@ -113,3 +133,58 @@
 		height: 14px
 		width: 14px
 		fill: $color_white
+
+
+.nav-mob
+	width: 100%
+	opacity: 0
+	height: 0px
+	visibility: hidden
+	transition: all .3s linear
+	display: none
+	@include media-tablet-horizontal
+		display: block
+	&__wrap
+	&__list
+		padding-bottom: 10px
+		margin: 10px 0
+		background-color: rgba(0,0,0,0.05)
+	&__item
+		padding: 10px 15px
+		border-bottom: 1px solid rgba(0,0,0,0.02)
+	&__link
+		line-height: 20px
+		font-family: $font_title
+		font-size: 1.6rem
+		font-weight: 400
+		text-transform: uppercase
+		color: $color_black
+	&.is-visible
+		opacity: 1
+		visibility: visible
+		overflow-y: hidden
+		height: auto
+
+.hamburger
+	margin-top: 5px
+	padding: 5px 10px
+
+.hamburger-box
+	width: 28px
+	height: 20px
+
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
+	width: 28px
+	height: 3px
+	border-radius: 4px
+
+.hamburger--slider .hamburger-inner::before
+	top: 8px
+.hamburger--slider .hamburger-inner::after
+	top: 16px
+
+.hamburger-inner:before
+	top: -8px
+
+.hamburger-inner:after
+	bottom: -8px

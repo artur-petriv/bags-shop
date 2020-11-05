@@ -19,6 +19,8 @@
 		color: $color_white
 		background-color: rgba(0,0,0,0.75)
 		cursor: pointer
+		@include media-mobile
+			display: none
 	&__icon
 		margin-left: 10px
 		height: 13px
@@ -38,7 +40,7 @@
 	&__list
 		display: flex
 		align-items: flex-start
-		justify-content: space-between
+		justify-content: center
 		flex-flow: row wrap
 
 

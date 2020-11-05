@@ -6,6 +6,7 @@
     box-sizing: inherit;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -57,3 +58,4 @@ input, textarea, button, select {
     width: 100%;
     max-width: 1170px;
 }
+

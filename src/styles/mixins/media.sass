@@ -4,7 +4,7 @@ $mediaWidthTabletHorizontal: 1024px
 $mediaWidthLaptop: 1366px
 
 @mixin media-mobile
-    @media (max-width: $mediaWidthMobile)
+    @media (min-width: $mediaWidthMobile)
         @content
 
 @mixin media-tablet
@@ -12,7 +12,7 @@ $mediaWidthLaptop: 1366px
         @content
 
 @mixin media-tablet-horizontal
-    @media (min-width: $mediaWidthTabletHorizontal)
+    @media (max-width: $mediaWidthTabletHorizontal)
         @content
 
 @mixin media-laptop
