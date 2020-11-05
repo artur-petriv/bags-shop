@@ -9,13 +9,14 @@ block content
 						h1.head-page__title Магазин
 						span.head-page__result Показано 13–24 из 40 результатов
 					.head-page__right
-						select.head-page__sort(name="sort")
-							option(value="default" selected) Сортировка по умолчанию
-							option(value="popular") По популярности
-							option(value="rating") По рейтингу
-							option(value="date") По дате
-							option(value="price-asc") По цене: от дешевых
-							option(value="price-desc") По цене: от дорогих
+						form.head-page__form
+							select.head-page__sort(name="sort")
+								option(value="default" selected) Сортировка по умолчанию
+								option(value="popular") По популярности
+								option(value="rating") По рейтингу
+								option(value="date") По дате
+								option(value="price-asc") По цене: от дешевых
+								option(value="price-desc") По цене: от дорогих
 						.breadcrumbs
 							a.breadcrumbs__link(href="./") Home
 							span.breadcrumbs__tag »
