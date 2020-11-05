@@ -1,3 +1,5 @@
+@import "../mixins/media"
+
 .header
 	position: relative
 	&__bar
@@ -83,6 +85,8 @@
 		position: relative
 		display: flex
 		align-items: center
+		@include media-mobile
+			order: 1
 	&__input
 		padding: 5px 0 5px 35px
 		background-color: rgba(255,255,255,0.2)
